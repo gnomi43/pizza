@@ -17,7 +17,11 @@
     justify-content: space-between;
 
     width: 250px;
-    height: 500px;
+    height: 300px;
+
+    margin-bottom: 25px;
+
+    border: 2px solid 
 }
 
 .menu__item-img{
@@ -42,7 +46,7 @@
 
     width: 10px;
     
-    border: 1px solid;
+    border: 1px solid #ffe135;
     border-radius: 5px;
 }
 
