@@ -1,0 +1,29 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    padding: 0 20px;
+
+    background-color: #ffe135;
+}
+
+.header__tagline{
+    flex-grow: 3;
+    padding: 0 30px;
+}
+
+.header__authorization,
+.header__basket{
+    padding: 10px 20px;
+}
+
+.header__authorization:hover,
+.header__basket:hover,
+.header__logo:hover{
+    cursor: pointer;
+    color: orange;
+}
