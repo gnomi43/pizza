@@ -8,30 +8,25 @@ import ListPizza from '../list-pizza';
 export default class Pizza extends React.Component {
 
     state = {
-        menu: {},
-        users:[
-                {
-                    basket: null,  
-                    id: 1,
-                    name: "admin",
-                    email: "admin@admin.ru",
-                    password: "123456"
-                }
-            ],
+        currentPrice: "euro",
         isAuth: false,
-        guestBasket: true,
+        basket: null,
         user: null
+    };
+
+    addToBasket = (id, quantity, price) => {
+
+        this.setState({
+            basket: [ ...this.state.basket, { id, quantity, price } ]
+        })
     };
 
     render(){
         return (
             <div className="pizza-wrapper">
                 <Header />
-                <ListPizza />
+                <ListPizza addToBasket = {this.addToBasket} currentPrice={ this.state.currentPrice }/>
             </div>
         );
     }
 };
-
-
- Pizza;
