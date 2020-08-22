@@ -1,0 +1,38 @@
+.header__basket{
+    padding: 10px 20px;
+    position: relative;
+}
+
+.header__basket:hover{
+    cursor: pointer;
+    color: orange;
+}
+
+.header__basket:hover .header__quantity{
+    color: #000000;
+}
+
+.header__quantity{
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+
+    font-size: 14px;
+    text-align: center;
+
+    border-radius: 50%;
+
+    background: orange;
+}
+
+.header__basket-link{
+    color: #000000;
+    text-decoration: none;
+}

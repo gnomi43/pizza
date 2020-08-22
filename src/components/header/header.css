@@ -7,6 +7,7 @@
     font-weight: 600;
 
     padding: 0 20px;
+    margin-bottom: 100px;
 
     background-color: #ffe135;
 }
@@ -16,14 +17,40 @@
     padding: 0 30px;
 }
 
-.header__authorization,
-.header__basket{
-    padding: 10px 20px;
+.header__authorization{
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+}
+
+.header__authorization-text{
+    line-height: 10px;
 }
 
 .header__authorization:hover,
-.header__basket:hover,
 .header__logo:hover{
     cursor: pointer;
+    color: orange;
+}
+
+.header__authorization-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 20px;
+    min-width: 120px;
+}
+
+.header__authorization-login{
+    margin-right: 10px;
+}
+
+.header__authorization-logout{
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.header__authorization-logout:hover{
     color: orange;
 }

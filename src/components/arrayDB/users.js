@@ -1,4 +1,4 @@
-const users = [
+export const users = [
     {
         id: 1,
         basket: null,  
@@ -6,12 +6,11 @@ const users = [
         email: "admin@admin.ru",
         password: "123456",
         group: "admin"
-
     },
 
     {
-        id: 1,
-        basket: [ {id: 1, quantity: 2}, {id: 3, quantity: 3} ],  
+        id: 2,
+        basket: [ {id: 1, quantity: 2, price: 15, name: "The Meats"}, {id: 3, quantity: 3, price: 12, name: "Meatball Pepperoni"} ],  
         name: "Alex",
         email: "alex@mail.ru",
         password: "Alexandro69",
@@ -19,7 +18,7 @@ const users = [
     },
 
     {
-        id: 1,
+        id: 3,
         basket: null,  
         name: "Nik",
         email: "Nik@gmail.com",
@@ -28,8 +27,8 @@ const users = [
     },
 
     {
-        id: 1,
-        basket: [ {id: 5, quantity: 2}, {id: 3, quantity: 3}, {id: 3, quantity: 5} ],  
+        id: 4,
+        basket: [ {id: 5, quantity: 2, price: 18, name: "Ultimate Pepperoni"}, {id: 3, quantity: 3, price: 12, name: "Meatball Pepperoni"}, {id: 1, quantity: 2, price: 15, name: "The Meats"} ],  
         name: "Petr",
         email: "Petr@ya.ru",
         password: "Petr",

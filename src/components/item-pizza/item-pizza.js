@@ -8,24 +8,38 @@ export default class ItemPizza extends React.Component {
     }
 
     quantityUpdate = (event) => {
+        const price = parseInt(event.target.value);
+
         this.setState({
-            quantity: event.target.value
+            quantity: price
         });
     };
+
+    onSubmit = (event) => {
+        event.preventDefault();
+        const {id, price, name } = this.props.item;
+        this.props.addToBasket(id, this.state.quantity, price, name);
+
+        this.setState({
+            quantity: 1
+        });
+    };
+
+
     render(){
         const {id, name, desc } = this.props.item;
         let { price } = this.props.item,
             priceSymbol = "$";
 
         if(this.props.currentPrice === "euro"){
-            price = (price * 1.3).toFixed(1);
+            price = Number((price * 0.8).toFixed(1));
             priceSymbol = "€"
         }
 
         return (
             <li className="menu__item"
                 key={id}>
-                <form onSubmit={ () => this.props.addToBasket(id, this.state.quantity, price) }>
+                <form onSubmit={ this.onSubmit }>
                     
                     <div className="menu__item-img">
                         <img src={require(`../../img/pizza_${id}.webp`)} width="200" height="200" alt="pizza"/>
@@ -40,9 +54,11 @@ export default class ItemPizza extends React.Component {
                         <input 
                             onChange={ this.quantityUpdate }
                             className="menu__item-quantity"
-                            type="num"
-                            min="1" max="10" step="1"
-                            value="1"/>
+                            type="number"
+                            placeholder="1"
+                            min="1"
+                            max="20"
+                            step="1"/>
                         <p className="menu__item-price">{price} {priceSymbol}</p>
                         <input 
                             className="menu__item-submit"

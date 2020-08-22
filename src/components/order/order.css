@@ -1,0 +1,43 @@
+
+.order__form-title{
+    margin: 20px auto;
+
+    width: max-content;
+}
+
+.order__form-inputs{
+    display: grid;
+    grid-gap: 15px;
+    margin-bottom: 25px;
+}
+
+.form-input__wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input{
+    border: 2px solid #ffe135;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.form-textarea{
+    padding: 5px 10px;
+
+    width: 250px;
+    max-width: 250px;
+    min-width: 100px;
+    height: 150px;
+    max-height: 150px;
+    min-height: 50px;
+
+    border: 2px solid #ffe135;
+    border-radius: 5px;
+}
+
+.order__form-details{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}

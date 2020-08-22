@@ -13,11 +13,11 @@ export default class ListPizza extends React.Component {
         });
 
         return (
-            <main className="menu container">
+            <div className="menu container">
                 <ul className="menu__list">
                     { itemPizza }
                 </ul>
-            </main>
+            </div>
         )
     }
 };

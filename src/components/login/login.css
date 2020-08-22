@@ -1,0 +1,16 @@
+.login__form{
+    display: grid;
+    grid-gap: 20px;
+    margin-bottom: 20px;
+}
+
+.login__form-inputs{
+    display: grid;
+    grid-gap: 10px;
+}
+
+.login__registration-link{
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+}
