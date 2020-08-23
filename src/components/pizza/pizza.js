@@ -168,7 +168,7 @@ export default class Pizza extends React.Component {
 
         return (
             <div className="pizza-wrapper">
-                <Router basename='/'>
+                <Router basename='/pizza/'>
                     <Header quantity = { quantity } updateCurPrice={ this.updateCurPrice } currentPrice={ currentPrice } state={ this.state } logOut={ this.logOut }/>
                         <main className="pizza-content">
                             <Route path="/" render={() => <ListPizza addToBasket = { this.addToBasket } currentPrice={ currentPrice }/>} exact/>
