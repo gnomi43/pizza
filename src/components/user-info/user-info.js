@@ -14,7 +14,7 @@ const UserInfo = ( {user ,isAuth, currentPrice} ) => {
 
         if(historyOrder){
             itemHistoryOrder = historyOrder.map( (el) => {
-                return <ItemHistoryOrder item={ el } key={ el.orderId } id={ el.orderId } currentPrice={ currentPrice } />
+                return <ItemHistoryOrder item={ el } key={ el.orderId } currentPrice={ currentPrice } />
              });
         }
 

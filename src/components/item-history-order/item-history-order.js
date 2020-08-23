@@ -1,9 +1,8 @@
 import React from 'react';
 import './item-history-order.css';
 
- const ItemHistoryOrder = ({ id, key, item, currentPrice}) => {
+ const ItemHistoryOrder = ({ id, item, currentPrice}) => {
 
-    console.log(key);
     const { totalQuantity, totalPrice, address } = item;
     let priceSymbol = "$",
         price = totalPrice;
@@ -15,8 +14,7 @@ import './item-history-order.css';
 
     
     return (
-        <li className="user-info__item-order"
-            key={ id }>
+        <li className="user-info__item-order">
             <div className="item-order__wrapper">
                 <span className="item-order__detail">Quantity:</span>
                 <span className="item-order__detail-value">{ totalQuantity }</span>

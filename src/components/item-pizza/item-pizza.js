@@ -38,7 +38,7 @@ export default class ItemPizza extends React.Component {
 
         return (
             <li className="menu__item"
-                key={id}>
+                key={ id }>
                 <form onSubmit={ this.onSubmit }>
                     
                     <div className="menu__item-img">
