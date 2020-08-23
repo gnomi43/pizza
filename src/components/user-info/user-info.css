@@ -1,0 +1,29 @@
+.user-info__list-info,
+.user-info__list-order{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.user-info__item{
+    margin-bottom: 10px;
+}
+
+.user-info__item-text,
+.item-order__detail{
+    margin-right: 10px;
+
+    font-weight: 700;
+}
+
+.user-info__item-order{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.item-order__wrapper:not(:last-child){
+    margin-right: 20px;
+    margin-bottom: 5px;
+}

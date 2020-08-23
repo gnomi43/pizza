@@ -9,6 +9,7 @@ import Order from "../order";
 import Login from '../login';
 import Reg from '../registration';
 import { users } from '../arrayDB/users';
+import UserInfo from '../user-info';
 
 
 export default class Pizza extends React.Component {
@@ -85,12 +86,9 @@ export default class Pizza extends React.Component {
        });
     };
 
-    loginUser = (event) => {
-        event.preventDefault();
+    loginUser = (email, password) => {
         let statusLogin = null,
             indexUser = null;
-        const   email = event.target.email.value,
-                password = event.target.password.value;
 
         users.forEach( (el, index)=>{
             if( el.email === email ){
@@ -116,18 +114,8 @@ export default class Pizza extends React.Component {
         }
     };
 
-    componentDidUpdate(){
-        console.log(this.state);
-        console.log(users);
-    };
-
-    registration = (event) => {
-        event.preventDefault();
-
+    registration = (name, email, password) => {
         let id = 0;
-        const   email = event.target.email.value,
-                password = event.target.password.value,
-                name = event.target.name.value;
 
         users.forEach(( el ) => {
             if( el.id >= id ){
@@ -171,7 +159,7 @@ export default class Pizza extends React.Component {
 
     render(){
 
-        const { basket, currentPrice, isAuth } = this.state;
+        const { basket, currentPrice, isAuth, user } = this.state;
         let quantity = 0;
 
         if( basket ){
@@ -188,6 +176,7 @@ export default class Pizza extends React.Component {
                             <Route path="/basket/order" render={() => <Order basket = { basket } currentPrice={ currentPrice } />}/>
                             <Route path="/login" render={() => <Login loginUser = { this.loginUser } isAuth={ isAuth } />}/>
                             <Route path="/registration" render={() => <Reg registration = { this.registration } isAuth={ isAuth } />}/>
+                            <Route path="/user-info" render={() => <UserInfo user = { user } isAuth={ isAuth } currentPrice={ currentPrice } />}/>
                         </main>
                 </Router>
             </div>

@@ -14,3 +14,7 @@
     color: #000000;
     text-align: center;
 }
+
+.login__error{
+    color: orangered;
+}

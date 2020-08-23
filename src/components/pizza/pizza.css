@@ -5,7 +5,8 @@
 
 .login,
 .order,
-.registration{
+.registration,
+.user-info{
     margin: 0 auto;
     padding: 0 40px;
     padding-bottom: 20px;

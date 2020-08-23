@@ -26,7 +26,7 @@ const Header = ( { updateCurPrice, currentPrice, quantity, state, logOut } ) => 
         const { name } = state.user;
         auth = ( <div className="header__authorization-wrapper">
                     <div className="header__authorization-login">
-                        { name }
+                        <Link className="header__authorization-user" to="/user-info">{ name }</Link>
                     </div>
 
                     <div className="header__authorization-logout" onClick={ logOut }>
