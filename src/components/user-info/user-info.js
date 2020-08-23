@@ -33,13 +33,13 @@ const UserInfo = ( {user ,isAuth, currentPrice} ) => {
                 </li>
     
                 <li className="user-info__item">
-                    <span className="user-info__item-text">Group users</span>
+                    <span className="user-info__item-text">User group:</span>
                     <span className="user-info__item-value">{ group }</span>
                 </li>
             </ul>
     
 
-            <h2 className="user-info__title">History order </h2>
+            <h2 className="user-info__title">Order history</h2>
             <ul className="user-info__list-order">
                 { itemHistoryOrder }
             </ul>

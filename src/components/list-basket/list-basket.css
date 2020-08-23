@@ -14,7 +14,6 @@
     margin: 0;
     padding: 0 40px;
 
-
     list-style: none;
 }
 
@@ -38,13 +37,19 @@
 .basket__total{
     display: flex;
     justify-content: center;
+    align-items: baseline;
 
+    margin-left: auto;
+    margin-right: 40px;
+    width: max-content;
+    
     font-size: 25px;
     font-weight: 700;
 }
 
 .basket__total-calc{
     margin-right: 20px;
+    font-size: 18px;
 }
 
 .basket__total-buy{
@@ -73,4 +78,8 @@
 .basket__total-buy:hover,
 .basket__total-buy:focus{
     box-shadow: 0px 0px 0px 0px;
+}
+
+.basket__total-text{
+    margin-left: 210px;
 }

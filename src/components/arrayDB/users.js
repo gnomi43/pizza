@@ -15,7 +15,7 @@ export const users = [
         name: "Alex",
         email: "alex@mail.ru",
         password: "Alexandro69",
-        group: "users",
+        group: "user",
         historyOrder: null
     },
 
@@ -25,7 +25,7 @@ export const users = [
         name: "Nik",
         email: "Nik@gmail.com",
         password: "NikB228",
-        group: "users",
+        group: "user",
         historyOrder: [ {orderId: 10001, totalQuantity: 5, totalPrice: 75, address: "Moscow, Lenina street 12, app 80"}, {orderId: 10002, totalQuantity: 1, totalPrice: 16, address: "Moscow, Lenina street 12, app 80"} ]
     },
 
@@ -35,7 +35,7 @@ export const users = [
         name: "Petr",
         email: "Petr@ya.ru",
         password: "Petr",
-        group: "users",
+        group: "user",
         historyOrder: null
     }
 ];

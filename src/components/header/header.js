@@ -41,7 +41,7 @@ const Header = ( { updateCurPrice, currentPrice, quantity, state, logOut } ) => 
             <Link to="/" className="header__logo">
                 <img src={require("../../img/logo/logo.png")} width="40" height="40" alt="logo pizza"/>
             </Link>
-            <p className="header__tagline">We create best pizza</p>
+            <p className="header__tagline">We Create The Best Pizza</p>
             <CurrentPrice updateCurPrice = { updateCurPrice } currentPrice={ currentPrice }/>
                 {auth}
             <Basket quantity = { quantity }/>

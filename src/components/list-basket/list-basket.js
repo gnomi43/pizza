@@ -31,8 +31,8 @@ export default class ListBasket extends React.Component {
         }; 
 
         if(currentPrice === "euro"){
-            deliveryCost = Number((deliveryCost * 0.8).toFixed(1));
-            totalPricePizza = Number((totalPricePizza * 0.8).toFixed(1));
+            deliveryCost = Number((deliveryCost * 0.8).toFixed(2));
+            totalPricePizza = Number((totalPricePizza * 0.8).toFixed(2));
             priceSymbol = "€"
         }
 
@@ -47,11 +47,11 @@ export default class ListBasket extends React.Component {
                             { itemBasket }
                         </ul>
                         <div className="basket__total">
-                            <p className="basket__total-calc">Total: {totalPricePizza} {priceSymbol}</p>
+                            <p className="basket__total-calc">Item Total: {totalPricePizza} {priceSymbol}</p>
                             <p className="basket__total-calc">Delivery: {deliveryCost} {priceSymbol}</p>
-                            <p className="basket__total-text">Order: {totalPrice} {priceSymbol}</p>
+                            <p className="basket__total-text">Total: {totalPrice} {priceSymbol}</p>
                         </div>
-                        <Link to="/basket/order" className="basket__total-buy">Buy</Link>
+                        <Link to="/basket/order" className="basket__total-buy">Checkout</Link>
                     </div>
                 </div>
             )

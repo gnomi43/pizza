@@ -8,7 +8,7 @@ import './item-history-order.css';
         price = totalPrice;
 
     if(currentPrice === "euro"){
-        price = Number((price * 0.8).toFixed(1));
+        price = Number((price * 0.8).toFixed(2));
         priceSymbol = "€"
     };
 

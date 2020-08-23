@@ -15,7 +15,7 @@ export default class ItemBasket extends React.Component {
             priceSymbol = "$";
 
         if(this.props.currentPrice === "euro"){
-            price = Number((price * 0.8).toFixed(1));
+            price = Number((price * 0.8).toFixed(2));
             priceSymbol = "€"
         }
 
@@ -37,7 +37,7 @@ export default class ItemBasket extends React.Component {
                     </div>
                     
                     <div className="basket__item-price">{price} {priceSymbol}</div>
-                    <div className="basket__item-total"> Total  {(price * quantity).toFixed(1)} {priceSymbol}</div>
+                    <div className="basket__item-total"> Price  {(price * quantity).toFixed(1)} {priceSymbol}</div>
             </li>
         )
     }

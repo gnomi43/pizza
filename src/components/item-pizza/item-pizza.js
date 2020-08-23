@@ -32,19 +32,19 @@ export default class ItemPizza extends React.Component {
             priceSymbol = "$";
 
         if(this.props.currentPrice === "euro"){
-            price = Number((price * 0.8).toFixed(1));
+            price = Number((price * 0.8).toFixed(2));
             priceSymbol = "€"
         }
 
         return (
             <li className="menu__item"
                 key={ id }>
-                <form onSubmit={ this.onSubmit }>
+                <form className="menu__item-form" onSubmit={ this.onSubmit }>
                     
                     <div className="menu__item-img">
                         <img src={require(`../../img/pizza_${id}.webp`)} width="200" height="200" alt="pizza"/>
                     </div>
-                    <p className="menu__item-description">
+                    <p className="menu__item-name">
                         {name}
                     </p>
                     <p className="menu__item-description">

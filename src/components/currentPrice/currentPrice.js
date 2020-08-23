@@ -19,7 +19,7 @@ export default class CurrentPrice extends React.Component {
                             checked={this.props.currentPrice === "euro" ? true : false}
                             readOnly
                             />
-                        <label htmlFor="euro" className="current-price__label">Euro</label>
+                        <label htmlFor="euro" className="current-price__label">EUR</label>
 
                     <input  type="radio" 
                             className="current-price__input"
@@ -28,7 +28,7 @@ export default class CurrentPrice extends React.Component {
                             onClick={this.updateCurPrice}
                             checked={this.props.currentPrice === "dollar" ? true : false}
                             readOnly />
-                        <label htmlFor="dollar" className="current-price__label">Dollar</label>
+                        <label htmlFor="dollar" className="current-price__label">USD</label>
 
             </div>
         )
